@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <%# header.ejsの読み込み%>
+  <%- include('header') -%>
+
+  <body>
+    <div id="header">
+      <a id="title" href="/">TODO-LIST</a>
+      <a id="search" href="search">SEARCH</a>
+    </div>
+
+    <p>新しいToDoを作成</p>
+    <form id="list-form">
+      <input id="list-name" type="text" class="form" name="list_name"/>
+      <input type="submit" value="リストの作成" class="submit"></input>
+    </form>
+
+    <div class="error">
+      <div class="list-sub"></div>
+    </div>
+
+    <div class='list-item'></div>
+
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='javascripts/list.js'></script>
+  </body>
+</html>

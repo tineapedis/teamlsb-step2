@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <%# header.ejsの読み込み%>
+  <%- include('header') -%>
+  <body>
+    <div id="header">
+      <a id="title" href="/">TODO-LIST</a>
+      <a id="search" href="search">SEARCH</a>
+    </div>
+
+    <div class="list-head-block"></div>
+
+    <div class="todo-form-block">
+      <form id='todo-form'>
+        <div class="left">
+          <p class="todo-form-contents">
+            <label for='text'>ToDo名</label>
+            <input id='todo-name-input' type='text' name='text'/>
+          </p>
+          <p class="todo-form-contents">
+            <label for='limit'>期限</label>
+            <input id='limit-input' type='date' name='limit'/>
+          </p>
+        </div>
+        <div class="right">
+          <input type='submit' value='ADD TODO' id='todo-btn'/>
+        </div>
+      </form>
+
+    </div>
+
+    <div class="error"></div>
+
+    <list class='list'>
+    </list>
+
+    <%# jQueryとtodo.jsを読み込む%>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='javascripts/show.js'></script>
+  </body>
+</html>

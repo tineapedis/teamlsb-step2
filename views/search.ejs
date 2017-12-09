@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <%# header.ejsの読み込み%>
+  <%- include('header') -%>
+
+  <body>
+    <div id="header">
+      <a id="title" href="/">TODO-LIST</a>
+      <a id="search" href="search">SEARCH</a>
+    </div>
+
+      <form id='search-form'>
+        <p>検索する</p>
+        <input id="search-text" type="text" class="form" name="list_name"/>
+        <input type="submit" value="検索" class="submit"></input>
+      </form>
+
+      <div class="todo-count-block"></div>
+      <div class='search-todo-block'></div>
+
+      <div class="list-count-block"></div>
+      <div class='search-list-block'></div>
+
+      <%# jQueryとtodo.jsを読み込む%>
+      <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+      <script src='javascripts/search.js'></script>
+  </body>
+</html>
